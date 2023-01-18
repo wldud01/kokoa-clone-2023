@@ -1,3 +1,3 @@
 # Kokoa Clone 2023 Study
 
-CSS got so much better!
+"We are going to Learn basic HTML & CSS"
