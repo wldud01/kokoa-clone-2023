@@ -14,6 +14,18 @@
         h3{
             background-color: beige;
         }
+        span{
+            color:black;
+            background-color: beige;
+            border-radius: 10px;
+            padding:5px;
+        }
+        span:nth-child(even){
+            background-color: teal;
+        }
+        p span{
+            color:white;
+        }
     </style>
 </head>
 <body>
@@ -55,7 +67,7 @@
                 <li>하나가 여러개를 가질 수도 있음</li>
         </pre>
         <h3>inline-block , block을 사용한 div의 배치</h3>
-        <p>
+        <pre>
             inline-block같은 경우 block과 비슷하지만 많은 문제를 가지고 있다.<br>
             요소 사이 사이에 공간이 생긴다. 또 inline-block은 반응형 디자인을 지원하지 않는다.<br>
             display : block; <br>
@@ -73,27 +85,95 @@
                 flex-wrap을 통해서wrap으로 설정해주면 겹치지 않고 아래로 내려감<br>
             
             </p>
-        </p>
+        </pre>
         <h3>단위</h3>
-        <p>
+        <pre>
             px는 픽셀로 나타내는 것
             <h4>vh</h4> 
             반응형 디자인을 할대 사용하는 크기를 나타내는 단위<br>
-        </p>
+        </pre>
         <h3>position</h3>
-        <p>
+        <pre>
             position fixed는 그려진 위치상에서 고정됨.<br>
             fixed를 설정하는 순간 다른 레이어에 그려지는 것이기 때문에 다른 margin뭐 이런거 상관 없이 top, bottom,left,right가 바뀌면 div위로 올라감<br>
-            
-
-        </p>
+            static은 레이아웃 처음 위치하는 박스에 두는 것이다. 이게 기본 defualt 값<br>
+            relative는 element가 처음 위치한 곳을 기준으로 top left right 등으로 수정하는 것이다.<br>
+            absolute는 top left bottom right를 사용하고 싶을 때 사용하는데 특이한 점은 부모 박스 기준이 아니라 가장 가까운 relative 부모를 기준으로 이동한다.<br>
+            따라서 가장 바깥쪽에 있는 body가 아니라 자기 부모를 기준으로 이런 속성을 사용하기 위해서는 부모를 relative 속성으로 바꿔준다.<br> 
+        </pre>
         <div class = "parents">
             <div class ="child">Hello</div>
             <div class ="child">Hello</div>
             <div class ="child">Hello</div>
         </div>
-        <span>hello</span>
-        <span>hello</span>
+
+
+        <h3>Pseudo selectors</h3>
+        <pre>
+            Pseudo selectors는 좀 더 세부적으로 엘리먼트를 선택해주는 것이다.
+            특정 태그에 속성을 부여하고 싶을 때 좀 더 세부적으로 지정해 줄 수 있다.
+            만약 아래 div 중 제일 마지막 div를 선택하고 싶을 때 사용함
+            div:last-child{background-color : teal;}
+            span:nth-child(even){background-color : teal;} 짝수번째만 변함
+            span:nth-child(odd){background-color : teal;} 홀수번째만 변함
+            괄호 안에 수학 식을 넣으면 그 규칙으로 움직일 수 있다.
+        </pre>
+        <span>Hello</span>
+        <span>Hello</span>
+        <span>Hello</span>
+        <span>Hello</span>
+        <span>Hello</span>
+        <span>Hello</span>
+
+        <div>
+            <span>This is challenge</span>
+            <p>
+                Lorem ipsum dolor sit amet consecterur...?
+                This si so nice weather right> <span>inside</span>
+            </p>
+        </div>
+        <pre>
+            위 처럼 p태그 내부 외부에 모두 span이 존재하는데 p안에 특정 span색만 바꾸고 싶다면??
+            그럼 p span{ } 이런 방식으로 작성하면 된다. 앞에서부터 차례로 찾는다.
+            그럼 div 바로 아래 있는 span만 속성을 주고 싶을 때는 어떻게 해야 할까
+            그냥 div span{ } 이렇게 하면 div에 속해 있는 모든 span의 속성이 바뀐다
+            <storng>따라서 div > span { } 이렇게 해주면 div 바로 아래 있는 span만 바뀐다.</storng>
+            <strong>p + span{ } 이런 식으로도 표현할 수 있는데 이 경우에는 p태그가 끝나고 바로 다음 span에만 적용된다.</strong>
+        </pre>
+        <h3>Combinator</h3>
+        <pre>
+            combinator은 ~ 이다. ~는 +나 > 처럼 사용하는 것이다.
+            만약 span이 p의 형제인데 바로 뒤에 오지 않을 때 쓸 수 있는게 바로 "~"이다.
+            <p></p>
+            <address>hi</address>
+            <span>hello</span>
+            이처럼 사용할 수 있다.
+            attribute에 대해서 설명한다.
+            아래는 개발자도구를 xhdgotj css를 확인하도록 하자
+            input[palceholder~="name"]{ } 이런 방식으로 작성한 것은
+            input 속성 중에 placeholder에 name이 포함되어 있으면 모두 적용한다는 의미이다
+            ~ 가 oo name 도 된다는 의미이다. 끝에 오는 경우 $ 처음에 오는경우 ^ 기호 사용
+
+            Hover 마우스 올릴때'
+            active 마우스로 잡고 있을 때
+            focus 키보드로 누를 때 ex tab으로 이동할때 효과
+            visited는 a link에서 적용되는데 클릭하고 나면 설정한데로 변경됨.
+            focus-within은 focused인 자식을 가진 부모 엘리먼트의 상태
+            예를 들어 만약 form에다가 적용하면 내부에 input 자식이 작동할 때 form에 효과 적용된다.
+            조금 더 응용을 해본다면 form:hover input{ 내용 } 이런식으로 form에 마우스가 있다면 input에다가 내용을 적용해라이런 의미
+            혹시 placehoder을 조금 더 뀜고 싶다면 input:: placeholder 이렇게 사용
+            혹시 마우스를 글씨에 드래그했을 때 멋진 효과를 주고 싶다면 p:: selection{} 이렇게 사용
+            p::first-line 하면 첫번째 모두 설정한 내용 변경 
+
+        </pre>
+        <div>
+            <form>
+                <input type="text" placeholder="username" />
+                <input type="password" required placeholder="password" />
+            </form>
+        </div>
+  
+
     </main>
     <footer>
         &copy; 2023
