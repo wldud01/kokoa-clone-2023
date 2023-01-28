@@ -250,8 +250,11 @@
             media Queries는 오직 CSS만을 이용하여 스크린의 사이즈를 알 수 있느 방법이다.
             @media screen and (min-width:400px) and (max-width:750px) {} 이런형식으로 하는 것
             400-750사이에 화면 크기 일때 적용하는 범위
-            만약에 위에 and orientation: landscape;로 하면 가로 모드일때 .... ㄷㄷ
+            만약에 위에 and orientation: landscape or portrait;로 하면 가로 모드일때 .... ㄷㄷ
             여러개 사용하여 반응형 페이지 만들기 가능
+            
+            비슷한 것으로 max-divice-width가 있는데 이는 오직 핸드폰에서만 적용된다.
+            @media print{} 하면 프린트 이미지 모습 할 때 설정을 변경가능
         </pre>
         <div class="media_queries">
             <div class="square"></div>
