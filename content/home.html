@@ -6,118 +6,233 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My website</title>
     <link href="styles.css" rel="stylesheet"/>
-    <style>
-        pre{
-            white-space: pre-line;
-        }
-
-        h3{
-            background-color: beige;
-        }
-        span{
-            color:black;
-            background-color: beige;
-            border-radius: 10px;
-            padding:5px;
-        }
-        span:nth-child(even){
-            background-color: teal;
-        }
-        p span{
-            color:white;
-        }
-    </style>
 </head>
 <body>
-    <headr><h1> HTML & CSS</h1> </headr>
+    <div class="header_title"> HTML & CSS</div>
     <main>
-        <address>123 road Atavista</address>
-        <p>We are going to learn CSS</p>
-        <pre>
-            point == selector { properties } carly bracket
-            h1 tag를 지정하여 속성을 작성해 준다.
-            규칙 - 세미콜론을 작성을해주어야 한 문장이 끝남.
+        <div class="section">
+            <head><h2>1. 들어가기 전..</h2></head>
+            <h3>We are going to learn CSS</h3>
+            <pre>
+                point == selector { properties } carly bracket
+                h1 tag를 지정하여 속성을 작성해 준다.
+                규칙 - 세미콜론을 작성을해주어야 한 문장이 끝남.
+    
+                cascading은 위에 있는 코드부터 차례데로 읽음.
+                만약 같은 코드가 include exclude에 모두 언급되어 있었을 때
+                html을 위에서 부터 읽기 때문에 link가 위에 있다면 아래 있는 style이 마지막에 적용될 것이다.
+                그 반대는 그 반대.
+                여러 태그들은 옆으로 배치되지 않는다. span은 옆으로 올 수 있다.
+                link도 바로 옆에 위치할 수 있다.
+    
+                display가 이를 결정함
+            </pre>
 
-            cascading은 위에 있는 코드부터 차례데로 읽음.
-            만약 같은 코드가 include exclude에 모두 언급되어 있었을 때
-            html을 위에서 부터 읽기 때문에 link가 위에 있다면 아래 있는 style이 마지막에 적용될 것이다.
-            그 반대는 그 반대.
-            여러 태그들은 옆으로 배치되지 않는다. span은 옆으로 올 수 있다.
-            link도 바로 옆에 위치할 수 있다.
+        </div>
+        <div class="section">
+            <head><h2>2. basic Css</h2></head>
+            <h3>block</h3> 
+            <pre>
+                옆에 박스가 올 수 없음 대부분의 박스는 block
+                브라우저는 요소들에 자동으로 default 속성을 주는데 margin이라는 요소를 준다. 각각 적용해주고 싶다면 위에서 부터 시계방향으로 적용 만약 collapse margins의 경우는 흰 box의 경계가 body를 넘어서면 body도 같이 움직임. 경계가 같아져서 margin이 모두한테 적용되는 이현상은 위아래만 일어남.
+                <strong>margin</strong>은 box의 border의 바깥 공간 속성을 설정하면 상하좌우 모두 적용 
+                border box 테두리 - border style Mdn을 통해 모드 속성을 볼 수 있음
+                border: px style ,  color
+                *을 사용하면 한번에 모두 적용 가능함.
+            </pre>
+                
+        
+            <h3>inline & id & class </h3>
+            <pre>
+                옆으로 올 수 있음을 의미 span, a, img
+                만약 어떤 요소가 inline이면 높이와 가로 크기를 가질 수 없다.
+                margin과 padding도 inline에 적용 될까? margin 잘 적용 안됨 높이 너비가 없으니까 좌우는 적용됨.
+                   
+                <strong>id</strong>
+                고유한 값이어야 함
+               <strong>class</strong>
+               여러번 재사용 가능함
+               하나가 여러개를 가질 수도 있음
+            </pre>
 
-            display가 이를 결정함
-                <h3>block</h3> 
-                <li>옆에 박스가 올 수 없음 대부분의 박스는 block</li>
-                <li>브라우저는 요소들에 자동으로 default 속성을 주는데 margin이라는 요소를 준다. 각각 적용해주고 싶다면 위에서 부터 시계방향으로 적용 만약 collapse margins의 경우는 흰 box의 경계가 body를 넘어서면 body도 같이 움직임. 경계가 같아져서 margin이 모두한테 적용되는 이현상은 위아래만 일어남.
-                </li>
-                <li><strong>margin</strong>은 box의 border의 바깥 공간 속성을 설정하면 상하좌우 모두 적용 
-                    border box 테두리 - border style Mdn을 통해 모드 속성을 볼 수 있음
-                    border: px style ,  color
-                    *을 사용하면 한번에 모두 적용 가능함. 
-                </li>
-                <h3>inline </h3>
-                <li> 옆으로 올 수 있음을 의미 span, a, img</li>
-                <li> 만약 어떤 요소가 inline이면 높이와 가로 크기를 가질 수 없다.</li>
-                <li>margin과 padding도 inline에 적용 될까? margin 잘 적용 안됨 높이 너비가 없으니까 좌우는 적용됨.
-                </li>
-                <h3>id</h3>
-                <li>고유한 값이어야 함</li>
-                <h3>class</h3>
-                <li>여러번 재사용 가능함</li>
-                <li>하나가 여러개를 가질 수도 있음</li>
-        </pre>
-        <h3>inline-block , block을 사용한 div의 배치</h3>
-        <pre>
-            inline-block같은 경우 block과 비슷하지만 많은 문제를 가지고 있다.
-            요소 사이 사이에 공간이 생긴다. 또 inline-block은 반응형 디자인을 지원하지 않는다.
-            display : block; 
-            flexbox -> 원하는 곳에 위치 시킬 수 있다 
-            1. 자식 엘리멘트에 아무것도 적지 말아야한다 부모한테 말해야
-            2. 부모 엘리먼트는 flex container로 만들어야 한다. display:flex
-            3. 다양한 명령으로 자식을 움직일 수 있다. 주측과(axis) 교차축
-            justify-content는 main axis가 적용된다 수평 방향 교차축은 수직
-            이런식으로 자식이 또 flexbox를 가지고 자식이 손주에게 명령함.
-            align-items는 cross axisfh 적용된다.
-
-            <strong>만약 flex가 수평으로 흐르는 것을 바꾸고 싶다면?</strong>
-            flex-direction을 column으로 변경하면 된다. 그럼 수직으로 바귐 column-reverse는 수직인데 그 반대로 배치됨
+            <h3>inline-block , block을 사용한 div의 배치</h3>
+            <pre>
+                inline-block같은 경우 block과 비슷하지만 많은 문제를 가지고 있다.
+                요소 사이 사이에 공간이 생긴다. 또 inline-block은 반응형 디자인을 지원하지 않는다.
+                display : block; 
+                flexbox -> 원하는 곳에 위치 시킬 수 있다 
+                1. 자식 엘리멘트에 아무것도 적지 말아야한다 부모한테 말해야
+                2. 부모 엘리먼트는 flex container로 만들어야 한다. display:flex
+                3. 다양한 명령으로 자식을 움직일 수 있다. 주측과(axis) 교차축
+                justify-content는 main axis가 적용된다 수평 방향 교차축은 수직
+                이런식으로 자식이 또 flexbox를 가지고 자식이 손주에게 명령함.
+                align-items는 cross axisfh 적용된다.
+    
+                <strong>만약 flex가 수평으로 흐르는 것을 바꾸고 싶다면?</strong>
+                flex-direction을 column으로 변경하면 된다. 그럼 수직으로 바귐 column-reverse는 수직인데 그 반대로 배치됨
+                
+                <strong>반응형으로 만들었는데 화면이 줄어들 때 겹치는 현상을 Wrapping이라고 함</strong>
+                flex-wrap을 통해서wrap으로 설정해주면 겹치지 않고 아래로 내려감
+                
+            </pre>
+            <h3>단위</h3>
+            <pre>
+                px는 픽셀로 나타내는 것
+                <strong>vh</strong> 
+                반응형 디자인을 할대 사용하는 크기를 나타내는 단위
+            </pre>
+            <h3>position</h3>
+            <pre>
+                position fixed는 그려진 위치상에서 고정됨.
+                fixed를 설정하는 순간 다른 레이어에 그려지는 것이기 때문에 다른 margin뭐 이런거 상관 없이 top, bottom,left,right가 바뀌면 div위로 올라감
+                static은 레이아웃 처음 위치하는 박스에 두는 것이다. 이게 기본 defualt 값
+                relative는 element가 처음 위치한 곳을 기준으로 top left right 등으로 수정하는 것이다.
+                absolute는 top left bottom right를 사용하고 싶을 때 사용하는데 특이한 점은 부모 박스 기준이 아니라 가장 가까운 relative 부모를 기준으로 이동한다.
+                따라서 가장 바깥쪽에 있는 body가 아니라 자기 부모를 기준으로 이런 속성을 사용하기 위해서는 부모를 relative 속성으로 바꿔준다. 
+            </pre>
             
-            <strong>반응형으로 만들었는데 화면이 줄어들 때 겹치는 현상을 Wrapping이라고 함</strong>
-            flex-wrap을 통해서wrap으로 설정해주면 겹치지 않고 아래로 내려감
-            
-        </pre>
-        <h3>단위</h3>
-        <pre>
-            px는 픽셀로 나타내는 것
-            <strong>vh</strong> 
-            반응형 디자인을 할대 사용하는 크기를 나타내는 단위
-        </pre>
-        <h3>position</h3>
-        <pre>
-            position fixed는 그려진 위치상에서 고정됨.
-            fixed를 설정하는 순간 다른 레이어에 그려지는 것이기 때문에 다른 margin뭐 이런거 상관 없이 top, bottom,left,right가 바뀌면 div위로 올라감
-            static은 레이아웃 처음 위치하는 박스에 두는 것이다. 이게 기본 defualt 값
-            relative는 element가 처음 위치한 곳을 기준으로 top left right 등으로 수정하는 것이다.
-            absolute는 top left bottom right를 사용하고 싶을 때 사용하는데 특이한 점은 부모 박스 기준이 아니라 가장 가까운 relative 부모를 기준으로 이동한다.
-            따라서 가장 바깥쪽에 있는 body가 아니라 자기 부모를 기준으로 이런 속성을 사용하기 위해서는 부모를 relative 속성으로 바꿔준다. 
-        </pre>
+            <h3>Pseudo selectors</h3>
+            <pre>
+                Pseudo selectors는 좀 더 세부적으로 엘리먼트를 선택해주는 것이다.
+                특정 태그에 속성을 부여하고 싶을 때 좀 더 세부적으로 지정해 줄 수 있다.
+                만약 아래 div 중 제일 마지막 div를 선택하고 싶을 때 사용함
+                div:last-child{background-color : teal;}
+                span:nth-child(even){background-color : teal;} 짝수번째만 변함
+                span:nth-child(odd){background-color : teal;} 홀수번째만 변함
+                괄호 안에 수학 식을 넣으면 그 규칙으로 움직일 수 있다.
+            </pre>
+
+            <h3>this is challenge 찾아가세요</h3>
+            <pre>
+                위 처럼 p태그 내부 외부에 모두 span이 존재하는데 p안에 특정 span색만 바꾸고 싶다면??
+                그럼 p span{ } 이런 방식으로 작성하면 된다. 앞에서부터 차례로 찾는다.
+                그럼 div 바로 아래 있는 span만 속성을 주고 싶을 때는 어떻게 해야 할까
+                그냥 div span{ } 이렇게 하면 div에 속해 있는 모든 span의 속성이 바뀐다
+                <storng>따라서 div > span { } 이렇게 해주면 div 바로 아래 있는 span만 바뀐다.</storng>
+                <strong>p + span{ } 이런 식으로도 표현할 수 있는데 이 경우에는 p태그가 끝나고 바로 다음 span에만 적용된다.</strong>
+            </pre>
+            <h3>Combinator</h3>
+            <pre>
+                combinator은 ~ 이다. ~는 +나 > 처럼 사용하는 것이다.
+                만약 span이 p의 형제인데 바로 뒤에 오지 않을 때 쓸 수 있는게 바로 "~"이다.
+                <p></p>
+                <address>hi</address>
+                <span>hello</span>
+                이처럼 사용할 수 있다.
+                attribute에 대해서 설명한다.
+                아래는 개발자도구를 xhdgotj css를 확인하도록 하자
+                input[palceholder~="name"]{ } 이런 방식으로 작성한 것은
+                input 속성 중에 placeholder에 name이 포함되어 있으면 모두 적용한다는 의미이다
+                ~ 가 oo name 도 된다는 의미이다. 끝에 오는 경우 $ 처음에 오는경우 ^ 기호 사용
+    
+                Hover 마우스 올릴때'
+                active 마우스로 잡고 있을 때
+                focus 키보드로 누를 때 ex tab으로 이동할때 효과
+                visited는 a link에서 적용되는데 클릭하고 나면 설정한데로 변경됨.
+                focus-within은 focused인 자식을 가진 부모 엘리먼트의 상태
+                예를 들어 만약 form에다가 적용하면 내부에 input 자식이 작동할 때 form에 효과 적용된다.
+                조금 더 응용을 해본다면 form:hover input{ 내용 } 이런식으로 form에 마우스가 있다면 input에다가 내용을 적용해라이런 의미
+                혹시 placehoder을 조금 더 뀜고 싶다면 input:: placeholder 이렇게 사용
+                혹시 마우스를 글씨에 드래그했을 때 멋진 효과를 주고 싶다면 p:: selection{} 이렇게 사용
+                p::first-line 하면 첫번째 모두 설정한 내용 변경 
+    
+            </pre>
+            <h3>Colors and Variables</h3>
+            <pre>
+                색은 RGB를 통해서 표현할 수 있다. 
+                A는 alpha를 의미하는데 투명도를 의미한다고 볼 수 있다.
+                :root라고 불리는 엘리먼트에 변수를 추가할 수 있다.
+                :root{
+                    --main-color: color넣기;
+                    --default-border: 1px solid var(--main-color);
+                }
+                그럼 --main color을 document root에 저장하는 것이다.
+                그래서 color을 쓸 필요가 없게 되었다.
+                p {
+                    background-color: var(--main-color); 
+                }
+                a {
+                    color: var(--main-color); 
+                }
+                위와 같은 방식으로 사용 가능하다.
+            </pre>
+
+
+        </div>
+ 
+        <div class = "section">
+            <head><h2>2. Advanced CSS</h2></head>
+            <h3>CSS 고급 속성</h3>
+            <pre>
+                Animation, Transformation, Transition
+    
+                <strong>Transition 변화</strong>
+                예를 들어 버튼을 만들었다고 가정을 해본다면, hover을 쓰면 마우스를 올렸을 때
+                아주 빠르게 변화한다 그런데 효과를 주고 싶다면 이전에는 javascript를 사용했다면
+                지금은 CSS로 해결가능하다.
+                transition: background-color 10s 그럼 10초가 걸린다.
+                ease-in-out, color 4s ease-in-out
+                즉 hover에서 바뀌는 속성들을 transition을 통해서 설정해준다.
+                transition: all 5s ease-in-out; // 모든 속성을 5초 동안 변경
+                hover에 있을 때는 마우스를 올릴 때만 transition이 작동한다.
+                ease-in-out은 움직일 때 동작과 같은 것인데 default로 가진 것은 linear
+                그외에는 ease-in, ease-in-out,ease-out,ease가 있다.
+                cubic-bezier( , , , ,)도 있는데 이를 이용해서 나만의 곡선을 만들 수 있다.
+                matthewlein.com/tools/ceaser을 이용하면 속성을 볼 수 있다.
+                
+                <strong>Transformation</strong>
+                transform은 회전이 가능하다. 3D로 회전 가능하다. x,y,z 크기 변화도 가능
+                translate도 가능하다. 이를 통해 요소가 움직이는 것들은 다른 element에 영향을 주지 않는다
+                margin과 padding도 적용되지 않는다. 
+                Anyway, transfrom(hover에다가)을 해주고 transition(hover전에다가)을 활용하면 애니매이션을 만들 수 있다.
+    
+                <strong>만약 애니메이션을 계속 지속하고 싶다면</strong>
+                @keyframes 이름 {
+                    from {
+                        transfrom: rotateX(0);
+                    }
+                    to {
+                        transform: rotateX(360deg);
+                    }
+                }
+                그리고 이름을 사용하고 싶은 태그 CSS에 넣어준다.
+                animaition : 이름 5s ease in out infinite 이러면 계속 됨.
+                
+                @keyframes 이름 {
+                    0% {
+                        transfrom: rotateX(0);
+                    }
+                    50% {
+                        transform: rotateX(360deg) translateY(100px);
+                    }
+                    100% {
+                        transform: rotateX(0);
+                    }
+                }
+                잊지 않게 CSS 잘 참고 하기..
+            </pre>
+            <h3>Media Queries</h3>
+            <pre>
+                media Queries는 오직 CSS만을 이용하여 스크린의 사이즈를 알 수 있느 방법이다.
+                @media screen and (min-width:400px) and (max-width:750px) {} 이런형식으로 하는 것
+                400-750사이에 화면 크기 일때 적용하는 범위
+                만약에 위에 and orientation: landscape or portrait;로 하면 가로 모드일때 .... ㄷㄷ
+                여러개 사용하여 반응형 페이지 만들기 가능
+                
+                비슷한 것으로 max-divice-width가 있는데 이는 오직 핸드폰에서만 적용된다.
+                @media print{} 하면 프린트 이미지 모습 할 때 설정을 변경가능
+            </pre>
+        </div>
+
+        <hr>
         <div class = "parents">
             <div class ="child">Hello</div>
             <div class ="child">Hello</div>
             <div class ="child">Hello</div>
+
         </div>
 
 
-        <h3>Pseudo selectors</h3>
-        <pre>
-            Pseudo selectors는 좀 더 세부적으로 엘리먼트를 선택해주는 것이다.
-            특정 태그에 속성을 부여하고 싶을 때 좀 더 세부적으로 지정해 줄 수 있다.
-            만약 아래 div 중 제일 마지막 div를 선택하고 싶을 때 사용함
-            div:last-child{background-color : teal;}
-            span:nth-child(even){background-color : teal;} 짝수번째만 변함
-             span:nth-child(odd){background-color : teal;} 홀수번째만 변함
-            괄호 안에 수학 식을 넣으면 그 규칙으로 움직일 수 있다.
-        </pre>
         <span>Hello</span>
         <span>Hello</span>
         <span>Hello</span>
@@ -132,40 +247,8 @@
                 This si so nice weather right> <span>inside</span>
             </p>
         </div>
-        <pre>
-            위 처럼 p태그 내부 외부에 모두 span이 존재하는데 p안에 특정 span색만 바꾸고 싶다면??
-            그럼 p span{ } 이런 방식으로 작성하면 된다. 앞에서부터 차례로 찾는다.
-            그럼 div 바로 아래 있는 span만 속성을 주고 싶을 때는 어떻게 해야 할까
-            그냥 div span{ } 이렇게 하면 div에 속해 있는 모든 span의 속성이 바뀐다
-            <storng>따라서 div > span { } 이렇게 해주면 div 바로 아래 있는 span만 바뀐다.</storng>
-            <strong>p + span{ } 이런 식으로도 표현할 수 있는데 이 경우에는 p태그가 끝나고 바로 다음 span에만 적용된다.</strong>
-        </pre>
-        <h3>Combinator</h3>
-        <pre>
-            combinator은 ~ 이다. ~는 +나 > 처럼 사용하는 것이다.
-            만약 span이 p의 형제인데 바로 뒤에 오지 않을 때 쓸 수 있는게 바로 "~"이다.
-            <p></p>
-            <address>hi</address>
-            <span>hello</span>
-            이처럼 사용할 수 있다.
-            attribute에 대해서 설명한다.
-            아래는 개발자도구를 xhdgotj css를 확인하도록 하자
-            input[palceholder~="name"]{ } 이런 방식으로 작성한 것은
-            input 속성 중에 placeholder에 name이 포함되어 있으면 모두 적용한다는 의미이다
-            ~ 가 oo name 도 된다는 의미이다. 끝에 오는 경우 $ 처음에 오는경우 ^ 기호 사용
 
-            Hover 마우스 올릴때'
-            active 마우스로 잡고 있을 때
-            focus 키보드로 누를 때 ex tab으로 이동할때 효과
-            visited는 a link에서 적용되는데 클릭하고 나면 설정한데로 변경됨.
-            focus-within은 focused인 자식을 가진 부모 엘리먼트의 상태
-            예를 들어 만약 form에다가 적용하면 내부에 input 자식이 작동할 때 form에 효과 적용된다.
-            조금 더 응용을 해본다면 form:hover input{ 내용 } 이런식으로 form에 마우스가 있다면 input에다가 내용을 적용해라이런 의미
-            혹시 placehoder을 조금 더 뀜고 싶다면 input:: placeholder 이렇게 사용
-            혹시 마우스를 글씨에 드래그했을 때 멋진 효과를 주고 싶다면 p:: selection{} 이렇게 사용
-            p::first-line 하면 첫번째 모두 설정한 내용 변경 
 
-        </pre>
         <div>
             <form>
                 <input type="text" placeholder="username" />
@@ -173,89 +256,13 @@
             </form>
         </div>
 
-        <h3>Colors and Variables</h3>
-        <pre>
-            색은 RGB를 통해서 표현할 수 있다. 
-            A는 alpha를 의미하는데 투명도를 의미한다고 볼 수 있다.
-            :root라고 불리는 엘리먼트에 변수를 추가할 수 있다.
-            :root{
-                --main-color: color넣기;
-                --default-border: 1px solid var(--main-color);
-            }
-            그럼 --main color을 document root에 저장하는 것이다.
-            그래서 color을 쓸 필요가 없게 되었다.
-            p {
-                background-color: var(--main-color); 
-            }
-            a {
-                color: var(--main-color); 
-            }
-            위와 같은 방식으로 사용 가능하다.
-        </pre>
 
-        <h3>CSS 고급 속성</h3>
-        <pre>
-            Animation, Transformation, Transition
 
-            <strong>Transition 변화</strong>
-            예를 들어 버튼을 만들었다고 가정을 해본다면, hover을 쓰면 마우스를 올렸을 때
-            아주 빠르게 변화한다 그런데 효과를 주고 싶다면 이전에는 javascript를 사용했다면
-            지금은 CSS로 해결가능하다.
-            transition: background-color 10s 그럼 10초가 걸린다.
-            ease-in-out, color 4s ease-in-out
-            즉 hover에서 바뀌는 속성들을 transition을 통해서 설정해준다.
-            transition: all 5s ease-in-out; // 모든 속성을 5초 동안 변경
-            hover에 있을 때는 마우스를 올릴 때만 transition이 작동한다.
-            ease-in-out은 움직일 때 동작과 같은 것인데 default로 가진 것은 linear
-            그외에는 ease-in, ease-in-out,ease-out,ease가 있다.
-            cubic-bezier( , , , ,)도 있는데 이를 이용해서 나만의 곡선을 만들 수 있다.
-            matthewlein.com/tools/ceaser을 이용하면 속성을 볼 수 있다.
-            
-            <strong>Transformation</strong>
-            transform은 회전이 가능하다. 3D로 회전 가능하다. x,y,z 크기 변화도 가능
-            translate도 가능하다. 이를 통해 요소가 움직이는 것들은 다른 element에 영향을 주지 않는다
-            margin과 padding도 적용되지 않는다. 
-            Anyway, transfrom(hover에다가)을 해주고 transition(hover전에다가)을 활용하면 애니매이션을 만들 수 있다.
-
-            <strong>만약 애니메이션을 계속 지속하고 싶다면</strong>
-            @keyframes 이름 {
-                from {
-                    transfrom: rotateX(0);
-                }
-                to {
-                    transform: rotateX(360deg);
-                }
-            }
-            그리고 이름을 사용하고 싶은 태그 CSS에 넣어준다.
-            animaition : 이름 5s ease in out infinite 이러면 계속 됨.
-            
-            @keyframes 이름 {
-                0% {
-                    transfrom: rotateX(0);
-                }
-                50% {
-                    transform: rotateX(360deg) translateY(100px);
-                }
-                100% {
-                    transform: rotateX(0);
-                }
-            }
-            잊지 않게 CSS 잘 참고 하기..
-        </pre>
+       
         <div class = "image">
             <img src="https://github.com/wldud01/kokoa-clone-2023/blob/main/content/giticon.png?raw=true" />
         </div>
-        <h3>Media Queries</h3>
-        <pre>
-            media Queries는 오직 CSS만을 이용하여 스크린의 사이즈를 알 수 있느 방법이다.
-            @media screen and (min-width:400px) and (max-width:750px) {} 이런형식으로 하는 것
-            400-750사이에 화면 크기 일때 적용하는 범위
-            만약에 위에 and orientation: landscape or portrait;로 하면 가로 모드일때 .... ㄷㄷ
-            여러개 사용하여 반응형 페이지 만들기 가능
-            
-            비슷한 것으로 max-divice-width가 있는데 이는 오직 핸드폰에서만 적용된다.
-            @media print{} 하면 프린트 이미지 모습 할 때 설정을 변경가능
-        </pre>
+        
         <div class="media_queries">
             <div class="square"></div>
 
