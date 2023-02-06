@@ -4,7 +4,7 @@
 This project is for Beautiful design
 We are focus on CSS, Not javascript. 
 
-- Priory Purpose
+<h3>Priory Purpose</h3>
 <li>Make more clear HTML structure</li>
 <li>Upgrade my CSS skill</li>
 <li>Study step by step About Font-end part</li>
