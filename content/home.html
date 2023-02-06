@@ -251,6 +251,35 @@
                 --colorName: something; 
                 이런 형식으로 지정해서 쉽게 사용한다.
 
+                <strong>Form - input 전송</strong>
+                action -> 이용 경로
+                method는 2가지 방법이 존재한다. 
+                <strong>GET</strong> 
+                -> 보안에 매우 취약함.
+                -> 로그인 정보들을 get으로 보내면 안됨.
+                -> URL로 띄워서 보내도 상관없는 것들을 GET 방식으로 전송함
+                <strong>POST</strong> 
+                -> 백엔드 서버로  전송됨
+
+
+                <strong>Nav</strong>
+                검색 엔진은 navigation tag를 찾아서
+                ul의 li 안에 있는 link를 가져오게끔 설정되어 있다. 
+                VSC에서 이코드를 모두 쓰지 않고 한번에 작성되게끔 할 수 있는 방법이 있다.
+                nav > ul > li*4 이렇게 하고 Enter을 치면 바로 태그들이 만들어진다. 
+
+                <strong>Border-box에 대하여</strong>
+                만약 box를 만들었다고 가정해보자.
+                그럼 box width에다가 200px를 주고 padding을 설정한다고 했을때
+                width를 줄이고 inline box를 만드는 것이 아니라
+                width는 그대로 유지한 채로 paddig을 준다
+                그래서 원하는 모양이 나오지 않을 수 있다
+                
+                그런데 내가 box 모양을 그대로 유지하고 싶다면
+                border-sizing을 border-box를 해주면 
+                padding을 주어도 box사이즈를 늘리지 않는다. 
+                padding을 주어도 내부에서 큰 size틀에 맞춰서 조절해 준다. 
+
 
             </pre>
 
