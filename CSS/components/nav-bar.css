@@ -23,4 +23,33 @@
 .nav__link{
     width: fit-content;
     height: fit-content;
+    position:relative;
+}
+.nav__notification{
+    background-color: tomato;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:15px;
+    height: 15px;
+    font-size: 10px;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    right: -3px;
+    top: -7px;
+}
+
+.nav__dot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    font-size: 34px;
+    color: tomato;
+    border-radius: 50%;
+    position: absolute;
+    right: -11px;
+    bottom: 22px;
 }
