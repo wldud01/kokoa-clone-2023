@@ -1,0 +1,14 @@
+@import "/variables.css";
+@import "/kokoa-clone-2023/CSS/components/user-component.css";
+
+.user-component__column:first-child .user-component__subtitle{
+    display:contents;
+    color: rgb(141, 141, 141);
+}
+.user-component__column:first-child{
+    border-bottom: 0px;
+}
+.user-component__text--wide-lineheight{
+    line-height: 20px;
+
+}

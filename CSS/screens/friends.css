@@ -10,3 +10,12 @@
 #friends-display-link i{
     color: rgba(0, 0, 0, 0.2);
 }
+
+.friends-screen__channel{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-left: 19px;
+    font-size: 13px;
+    color: #5f5b5b;
+}

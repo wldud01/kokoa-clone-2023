@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/styles.css">
-    <title>Welcome to KoKoa Clone</title>
+    <title>Chat -kakao clone</title>
 </head>
 <body>
     <div class ="status-bar">
@@ -27,45 +27,27 @@
     </div>
 
     <header class="screen-header">
-        <h1 class="screen-header__title">Friends</h1>
+        <h1 class="screen-header__title screen-header__title--blod">Chats</h1>
         <div class="screen-header__icons"></div>
         <span> <i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
         <span><i class="fa-solid fa-music fa-lg"></i></span>
         <span> <i class="fa-solid fa-gear fa-lg"></i></span>
+        <span> <i class="fa-solid fa-gear fa-lg"></i></span>
     </header>
-    <!-- notice on top postion -->
-    <a id="friends-display-link">
-        <i class="fa-solid fa-circle-info"></i>
-        Friends' Name Display
-        <i class="fa-solid fa-chevron-right"></i>
-    </a>
 
     <!--main component-->
     <main class="friends-screen">
         <div class="user-component">
             <!--My-->
-            <div class="user-component__column">
+            <div class="user-component__column user-component--no-line">
                 <img src="content/giticon.png" 
                 class="user-component__avatar user-component__avatar--xl">
-                <div class="user-component__text">
+                <div class="user-component__text user-component__text--wide-lineheight">
                     <h4 class="user-component__title">Lina</h4>
-                    <h4 class="user-component__subtitle">this text whatever</h4>
+                    <h4 class="user-component__subtitle">please check My Kakao Account info</h4>
                 </div>
             </div>
             <!--Friends-->
-            <div class = "friends-screen__channel">
-                <div class="friends-screen__channel-header">
-                    <span>Channel</span>
-                </div>
-            </div>
-
-            <div class="user-component__column">
-                <i class="fa-solid fa-comment-sms user-component__avatar--sm"></i>
-                <div class="user-component__text">
-                    <h4 class="user-component__title user-component__title--notbold">Channel</h4>
-                </div>
-                <span class="user-component__column__span">2 ></span>
-            </div>
         </div>
     </main>
 
@@ -75,12 +57,12 @@
         <ul class="nav__list">
             <li class="nav__btn">
                 <a class="nav__link" href="friends.html">
-                    <i class="fa-solid fa-user fa-lg"></i></a>
+                    <i class="far fa-user fa-lg"></i></a>
             </li>
             <li class="nav__btn">
                 <a class="nav__link"  href="chat.html">
                     <span class="nav__notification">1</span>
-                    <i class="fa-regular fa-comment fa-lg"></i></a>
+                    <i class="fas fa-comment fa-lg"></i></a>
             </li>
             <li class="nav__btn">
                 <a class="nav__link" href="find.html">

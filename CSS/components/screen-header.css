@@ -17,3 +17,6 @@
 .screen-header> span > i {
     margin: 29px 15px;
 }
+.screen-header__title--blod{
+    font-weight: 900;
+}
