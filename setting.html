@@ -26,35 +26,40 @@
         </div>
     </div>
 
-    <header class="screen-header">
-        <h1 class="screen-header__title screen-header__title--blod">Chats</h1>
-        <div class="screen-header__icons"></div>
-        <span> <i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
-        <span><i class="fa-solid fa-music fa-lg"></i></span>
-        <span><a href="setting.html"><i class="fa-solid fa-gear fa-lg"></i></a></span>
-        <span> <i class="fa-solid fa-gear fa-lg"></i></span>
-    </header>
-    <a href="chatScreen.html">
-    <!--main component-->
-        <main class="friends-screen">
-            <div class="user-component">
-                <!--My-->
-                <div class="user-component__column user-component--no-line">
-                    <img src="content/giticon.png" 
-                    class="user-component__avatar user-component__avatar--xl">
-                    <div class="user-component__text user-component__text--wide-lineheight">
-                        <h4 class="user-component__title">Lina</h4>
-                        <h4 class="user-component__subtitle">please check My Kakao Account info</h4>
-                    </div>
+    <header class="screen-header screen-header__icons__width">
+        <span class="screen-header__span"><a href="chat.html"> < </a></span>
+        <div class="screen-header__icons">
+            <h1 class="screen-header__title screen-header__title--blod">Settings</h1>
+        </div>
+        <span><i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
 
-                </div>
-                <div class="user-component user-component__text-align">
-                    <span class="user-component user-component__text-size">22:22</span>
-                    <div class="badge">1</div>
-                </div>            
+    </header>
+    <!--component code 재활용 했는데 ul li로 만들어도 될뻔 -->
+    <main class="setting-main"> 
+        <div class="setting-component">
+            <div class="setting-component__text">
+                <i class="fa-solid fa-bullhorn setting-component__avatar--big"></i>
+                <h4 class="setting-component__title">Notices</h4>
             </div>
-        </a>
+            <div class="setting-component__sub setting-component__sub--none">Hello</div>
+        </div>
+        <div class="setting-component">
+            <div class="setting-component__text">
+                <i class="fa-solid fa-flask setting-component__avatar--big"></i>
+                <h4 class="setting-component__title">Kakao Lab</h4>
+            </div>
+            <div class="setting-component__sub">hello</div>
+        </div>
+        <div class="setting-component">
+            <div class="setting-component__text">
+                <i class="fa-solid fa-circle-exclamation setting-component__avatar--big"></i>
+                <h4 class="setting-component__title">Version</h4>
+            </div>
+            <div class="setting-component__sub">Lastest Version</div>
+        </div>
     </main>
+
+    
 
 
     <!-- nave bar-->
@@ -67,7 +72,7 @@
             <li class="nav__btn">
                 <a class="nav__link"  href="chat.html">
                     <span class="nav__notification badge">1</span>
-                    <i class="fas fa-comment fa-lg"></i></a>
+                    <i class="fa-regular fa-comment fa-lg"></i></a>
             </li>
             <li class="nav__btn">
                 <a class="nav__link" href="find.html">

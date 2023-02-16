@@ -1,0 +1,44 @@
+@import "variables.css";
+
+#chat-screen-body{
+    background-color: var(--chat-background);
+    height: 11000vh;
+}
+#chat-screen-body .screen-header__chat{
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 25px;
+    z-index: 1;
+    background: var(--chat-background);
+}
+#chat-screen-body .status-bar{
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 2;
+    background: var(--chat-background);
+}
+
+.screen-header__chat> span > i {
+    margin: 25px 7px;
+}
+
+.screen-header__chat> span{
+    padding-right: 10px;
+}
+
+.chat_timestamp{
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 188px;
+    height: 20px;
+    border-radius: 10px;
+    font-size: 12px;
+    position: absolute;
+    top: 100px;
+    z-index: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4f4e4e;
+}
